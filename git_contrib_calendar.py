@@ -32,7 +32,7 @@ def matrix_traverse(row, col, matrix, mat_val_func):
 		return row,col
 
 	# print "row - %s, col - %s, date - %s, value - %s" % (row, col, matrix_evaluator(row, col, matrix, start_date), matrix[row][col])
-	matrix_evaluator(row, col, matrix[row][col])
+	mat_val_func(row, col, matrix[row][col])
 
 	col = col + 1 if (row + 1 ) % len(matrix) == 0 else col
 
